@@ -42,6 +42,17 @@ Objetivo 🎯  &nbsp;&nbsp;Automatizar testes funcionais (e2e), de API Rest (bac
 - [Bash](https://www.gnu.org/software/bash/)
 - [VSCode](https://code.visualstudio.com/)
 
+Configurações do Ambiente:
+
+```script
+mkdir project_Cypress
+```
+```script
+npm init -y
+```
+```script
+npm install cypress@3.6.0
+```
 
 ## Plano de teste
 

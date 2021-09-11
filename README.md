@@ -59,6 +59,14 @@ npm install cypress@3.6.0
 ![Screen Shot 2021-09-10 at 21 57 49](https://user-images.githubusercontent.com/990877/132931132-19d2bb17-174f-4fef-aee6-c62ab34ee579.png)
 ![Screen Shot 2021-09-10 at 21 59 17](https://user-images.githubusercontent.com/990877/132931138-2cf3305c-72e4-474a-a5b5-4fcf1239ddc9.png)
 
+## Para melhor compatibilidade com outros sistemas operacionais, vamos realizar a seguinte configuração no arquivo 'package.json'.
+
+![Screen Shot 2021-09-10 at 22 07 17](https://user-images.githubusercontent.com/990877/132931406-82faaeab-eec5-4091-a024-0e9dee517bb9.png)
+
+```script
+npm run cypress:open
+```
+![Screen Shot 2021-09-10 at 22 09 33](https://user-images.githubusercontent.com/990877/132931451-61b66d83-b51d-4ea9-adf0-68088eac2c35.png)
 
 ## Plano de teste
 

@@ -53,6 +53,12 @@ npm init -y
 ```script
 npm install cypress@3.6.0
 ```
+```script
+./node_modules/.bin/cypress open
+```
+![Screen Shot 2021-09-10 at 21 57 49](https://user-images.githubusercontent.com/990877/132931132-19d2bb17-174f-4fef-aee6-c62ab34ee579.png)
+![Screen Shot 2021-09-10 at 21 59 17](https://user-images.githubusercontent.com/990877/132931138-2cf3305c-72e4-474a-a5b5-4fcf1239ddc9.png)
+
 
 ## Plano de teste
 

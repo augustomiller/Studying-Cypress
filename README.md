@@ -68,6 +68,8 @@ npm run cypress:open
 ```
 ![Screen Shot 2021-09-10 at 22 09 33](https://user-images.githubusercontent.com/990877/132931451-61b66d83-b51d-4ea9-adf0-68088eac2c35.png)
 
+- [action.spec.js](https://www.youtube.com/watch?v=zx6Go3_Xl1g)
+
 ## Plano de teste
 
 - [ ] Lorem Ipsum

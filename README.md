@@ -70,6 +70,18 @@ npm run cypress:open
 
 - [action.spec.js](https://www.youtube.com/watch?v=zx6Go3_Xl1g)
 
+##
+
+## ESlint
+
+```script
+npm install install eslint --save-dev
+```
+```script
+node_modules/.bin/eslint --init
+```
+
+
 ## Plano de teste
 
 - [ ] Lorem Ipsum

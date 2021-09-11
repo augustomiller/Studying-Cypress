@@ -80,6 +80,9 @@ npm install install eslint --save-dev
 ```script
 node_modules/.bin/eslint --init
 ```
+```script
+❯ Airbnb: https://github.com/airbnb/javascript
+```
 
 
 ## Plano de teste

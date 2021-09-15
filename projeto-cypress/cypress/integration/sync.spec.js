@@ -18,4 +18,11 @@ describe('Esperas...', () => {
     cy.get('#novoCampo').should('exist');
     cy.get('#novoCampo').type('Funciona!!!');
   });
+
+  it.only('Deve fazer retry', () => {
+    cy.get('#buttonDelay').click();
+    cy.get('#novoCampo')
+      .should('exist')
+      .type('Escrevendo no input!');
+  });
 });

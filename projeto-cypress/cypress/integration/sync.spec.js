@@ -19,10 +19,19 @@ describe('Esperas...', () => {
     cy.get('#novoCampo').type('Funciona!!!');
   });
 
-  it.only('Deve fazer retry', () => {
+  it('Deve fazer retry', () => {
     cy.get('#buttonDelay').click();
     cy.get('#novoCampo')
       .should('exist')
       .type('Escrevendo no input!');
+  });
+
+  it.only('Uso do find', () => {
+    cy.get('#buttonList').click();
+    cy.get('#lista li')
+      .find('span')
+      .should('contain', 'Item 1');
+    cy.get('#lista li span')
+      .should('contain', 'Item 2');
   });
 });

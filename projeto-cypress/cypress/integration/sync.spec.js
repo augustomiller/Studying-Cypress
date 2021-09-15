@@ -36,7 +36,25 @@ describe('Esperas...', () => {
   });
 
   it.only('Uso do Timeout', () => {
-    cy.get('#buttonDelay').click();
-    cy.get('#novoCampo', { timeout: 1000 }).should('exist');
+    // cy.get('#buttonDelay').click();
+    // cy.get('#novoCampo', { timeout: 6000 }).should('exist');
+  });
+
+  it.only('Click retry', () => {
+    cy.get('#buttonCount')
+      .click()
+      .click()
+      .should('have.value', '111');
+  });
+
+  it.only('Should vs Then', () => {
+    // cy.get('#buttonListDOM').should(($el) => {
+    cy.get('#buttonListDOM').then(($el) => {
+    // cy.get('#lista li span').should(($el) => {
+    // cy.get('#lista li span').then(($el) => {
+      // console.log($el);
+      expect($el).to.have.length(1);
+      cy.get('#buttonList');
+    });
   });
 });

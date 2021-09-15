@@ -10,6 +10,10 @@ describe('Cypress basics', () => {
       .should('be.equal', 'Campo de Treinamento')
       .and('contain', 'Campo');
 
+    cy.title().then((title) => {
+      console.log(title);
+    });
+
     // TODO Imprimir o log no console.
     // TODO Escrever o título em um campo de texto.
   });

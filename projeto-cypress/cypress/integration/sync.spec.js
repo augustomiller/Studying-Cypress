@@ -34,4 +34,9 @@ describe('Esperas...', () => {
     cy.get('#lista li span')
       .should('contain', 'Item 2');
   });
+
+  it.only('Uso do Timeout', () => {
+    cy.get('#buttonDelay').click();
+    cy.get('#novoCampo', { timeout: 1000 }).should('exist');
+  });
 });

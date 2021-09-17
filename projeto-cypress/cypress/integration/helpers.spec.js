@@ -26,4 +26,18 @@ describe('Helpers...', () => {
     cy.wrap(promise).then((retorno) => console.log(retorno));
     cy.get('#buttonList').then(() => console.log('Encontrei o segundo'));
   });
+
+  it('Its...', () => {
+    const obj = { name: 'user', age: 20 };
+    cy.wrap(obj).should('have.property', 'name', 'user');
+    cy.wrap(obj).its('name').should('be.a.equal', 'user');
+
+    const objeto = { name: 'user', age: 20, address: { street: 'Minha Rua.' } };
+    cy.wrap(objeto).its('address').should('have.a.property', 'street');
+    cy.wrap(objeto).its('address').its('street').should('contain', 'Rua');
+    cy.wrap(objeto).its('address.street').should('contain', 'Rua');
+
+    cy.visit('https://www.wcaquino.me/cypress/componentes.html');
+    cy.title().its('length').should('be.a.equal', 20);
+  });
 });

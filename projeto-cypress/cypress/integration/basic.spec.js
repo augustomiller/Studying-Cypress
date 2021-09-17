@@ -12,10 +12,10 @@ describe('Cypress basics', () => {
 
     cy.title().then((title) => {
       console.log(title);
-    });
 
-    // TODO Imprimir o log no console.
-    // TODO Escrever o título em um campo de texto.
+      // Escrever o título em um campo de texto.
+      cy.get('#formNome').type(title);
+    });
   });
 
   it('Should find and interact with an element', () => {

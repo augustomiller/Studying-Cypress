@@ -78,12 +78,28 @@ describe('Work with basic elements', () => {
       .select('1graucomp')
       .should('have.value', '1graucomp');
 
-    // TODO validar as opções do combo.
+    // Verifica  o tamanho da lista de elementos.
+    cy.get('[data-test=dataEscolaridade] option').should('have.length', 8);
+    cy.get('[data-test=dataEscolaridade] option').then(($arr) => {
+      const values = [];
+      $arr.each(function () {
+        values.push(this.innerHTML);
+      });
+      expect(values).to.include.members(['Superior', 'Mestrado']);
+    });
   });
 
   it.only('Combo Multiple', () => {
     cy.get('[data-testid=dataEsportes]').select(['Corrida', 'Karate']);
 
-    // TODO validar opções selecionadas do combo multiplo.
+    // validar opções selecionadas do combo multiplo.
+    cy.get('[data-testid=dataEsportes]').then(($el) => {
+      expect($el.val()).to.be.deep.equal(['Corrida', 'Karate']);
+      expect($el.val()).to.have.length(2);
+    });
+
+    cy.get('[data-testid=dataEsportes]')
+      .invoke('val')
+      .should('eql', ['Corrida', 'Karate']);
   });
 });

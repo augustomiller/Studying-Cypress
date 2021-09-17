@@ -27,6 +27,9 @@ describe('Helpers...', () => {
     cy.get('#buttonList').then(() => console.log('Encontrei o segundo'));
   });
 
+  /**
+   * Esse método trabalha com as propriedades...
+  */
   it('Its...', () => {
     const obj = { name: 'user', age: 20 };
     cy.wrap(obj).should('have.property', 'name', 'user');
@@ -39,5 +42,23 @@ describe('Helpers...', () => {
 
     cy.visit('https://www.wcaquino.me/cypress/componentes.html');
     cy.title().its('length').should('be.a.equal', 20);
+  });
+
+  /**
+   * Esse método trabalha com as funções...
+   * Com ele consigo pegar uma função e enviar para o cypress executar...
+  */
+  it.only('Invoke', () => {
+    const getValue = () => 1;
+    const sum = (a, b) => a + b;
+
+    cy.wrap({ fn: getValue }).invoke('fn').should('be.a.equal', 1);
+    cy.wrap({ fn: sum }).invoke('fn', 2, 5).should('be.a.equal', 7);
+
+    cy.window().invoke('alert', 'Dá pra ver?');
+
+    cy.visit('https://www.wcaquino.me/cypress/componentes.html');
+    cy.get('#resultado')
+      .invoke('html', '<input type="button" value="hacked"/>');
   });
 });

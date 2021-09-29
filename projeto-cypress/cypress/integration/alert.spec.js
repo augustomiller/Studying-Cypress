@@ -51,4 +51,18 @@ describe('Work with basic elements', () => {
     });
     cy.get('#confirm').click();
   });
+
+  it.only('Prompt', () => {
+    cy.window().then((win) => {
+      cy.stub(win, 'prompt').returns('42');
+    });
+    cy.on('window:confirm', (msg) => {
+      expect(msg).to.be.equal('Era 42?');
+    });
+    cy.on('window:alert', (msg) => {
+      console.log(msg);
+      expect(msg).to.be.equal(':D');
+    });
+    cy.get('#prompt').click();
+  });
 });
